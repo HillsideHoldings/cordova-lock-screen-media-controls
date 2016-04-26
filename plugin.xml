@@ -15,6 +15,32 @@
   </js-module>
 
 
+  <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Lockscreen" >
+                <param name="android-package" value="org.apache.cordova.media.lockscreencontrols.LockscreenPlugin"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <receiver android:name="org.apache.cordova.media.lockscreencontrols.MusicIntentReceiver">
+            <intent-filter>
+                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+        </config-file>
+
+        <source-file src="src/android/AudioFocusHelper.java" target-dir="src/org/apache/cordova/media/lockscreencontrols" />
+        <source-file src="src/android/LockscreenPlugin.java" target-dir="src/org/apache/cordova/media/lockscreencontrols" />
+        <source-file src="src/android/MusicIntentReceiver.java" target-dir="src/org/apache/cordova/media/lockscreencontrols" />
+        <source-file src="src/android/MusicFocusable.java" target-dir="src/org/apache/cordova/media/lockscreencontrols" />
+        <source-file src="src/android/MediaSessionController.java" target-dir="src/org/apache/cordova/media/lockscreencontrols" />
+     </platform>
+  
   <platform name="ios">
     
     <config-file target="config.xml" parent="/*">

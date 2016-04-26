@@ -1,0 +1,32 @@
+{
+  "name": "cordova-lock-screen-media-controls",
+  "version": "0.0.1",
+  "description": "A Cordova plugin that displays lockscreen media info",
+  "cordova": {
+    "id": "cordova-lock-screen-media-controls",
+    "platforms": [
+      "android",
+      "ios",
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HillsideHoldings/cordova-lock-screen-media-controls.git"
+  },
+  "keywords": [
+    "cordova",
+    "media",
+    "lockscreen",
+	"ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+  ],
+  
+  "peerDependencies": {
+    "cordova-plugin-file": "^4.0.0"
+  },
+  
+  "author": "Bilal Shabbir",
+  "license": " ",
+  
+}
