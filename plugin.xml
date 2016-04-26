@@ -39,7 +39,7 @@
         <source-file src="src/android/MusicIntentReceiver.java" target-dir="src/org/apache/cordova/media/lockscreencontrols" />
         <source-file src="src/android/MusicFocusable.java" target-dir="src/org/apache/cordova/media/lockscreencontrols" />
         <source-file src="src/android/MediaSessionController.java" target-dir="src/org/apache/cordova/media/lockscreencontrols" />
-     </platform>
+	</platform>
   
   <platform name="ios">
     
