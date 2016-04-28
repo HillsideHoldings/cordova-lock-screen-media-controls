@@ -33,12 +33,16 @@
             </intent-filter>
         </receiver>
         </config-file>
+		
+		<dependency id="cordova-plugin-background-mode" url="https://github.com/katzer/cordova-plugin-background-mode.git" />
 
         <source-file src="src/android/AudioFocusHelper.java" target-dir="src/org/apache/cordova/media/lockscreencontrols" />
         <source-file src="src/android/LockscreenPlugin.java" target-dir="src/org/apache/cordova/media/lockscreencontrols" />
         <source-file src="src/android/MusicIntentReceiver.java" target-dir="src/org/apache/cordova/media/lockscreencontrols" />
         <source-file src="src/android/MusicFocusable.java" target-dir="src/org/apache/cordova/media/lockscreencontrols" />
         <source-file src="src/android/MediaSessionController.java" target-dir="src/org/apache/cordova/media/lockscreencontrols" />
+		<source-file src="src/android/MediaActionListener.java" target-dir="src/org/apache/cordova/media/lockscreencontrols" />
+		<source-file src="libs/android/picasso-2.0.0.jar" target-dir="libs" />
 	</platform>
   
   <platform name="ios">
