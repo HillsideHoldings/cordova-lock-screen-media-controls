@@ -1,5 +1,3 @@
-cordova.define("cordova-lock-screen-media-controls.Lockscreen", function(require, exports, module) {
-
 		var Lockscreen = function() {
 			cordova.exec(null, null, "Lockscreen", "init", []);
 		};
@@ -7,7 +5,6 @@ cordova.define("cordova-lock-screen-media-controls.Lockscreen", function(require
 		// Media states
 		Lockscreen.STATE_PLAYING = "PLAYING";
 		Lockscreen.STATE_PAUSED = "PAUSED";
-		Lockscreen.STATE_STOPPED = "STOPPED";
 		Lockscreen.STATE_STOPPED = "STOPPED";
 		Lockscreen.ACTION_PLAY_PAUSE = "PLAY_PAUSE";
 		Lockscreen.ACTION_PLAY = "PLAY";
@@ -44,5 +41,4 @@ cordova.define("cordova-lock-screen-media-controls.Lockscreen", function(require
 					 'listenActions', []);
 		};
 
-			module.exports = Lockscreen;
-});
+		module.exports = Lockscreen;
