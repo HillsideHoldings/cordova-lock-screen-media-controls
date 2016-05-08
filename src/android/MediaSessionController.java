@@ -264,6 +264,7 @@ public class MediaSessionController implements MusicFocusable {
 
 				switch (keyEvent.getKeyCode()) {
 				case KeyEvent.KEYCODE_HEADSETHOOK:
+					break;
 				case KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE:
 					if (mediaActionListener != null) {
 						mediaActionListener
