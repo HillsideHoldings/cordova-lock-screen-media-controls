@@ -11,6 +11,10 @@
 		Lockscreen.ACTION_PAUSE = "PAUSE";
 		Lockscreen.ACTION_REWIND = "REWIND";
 		Lockscreen.ACTION_FORWARD = "FORWARD";
+		
+		Lockscreen.ACTION_HEADSET_SINGLE_CLICK = "HEADSET_SINGLE_CLICK";
+		Lockscreen.ACTION_HEADSET_DOUBLE_CLICK = "HEADSET_DOUBLE_CLICK";
+		Lockscreen.ACTION_HEADSET_TRIPPLE_CLICK = "HEADSET_TRIPPLE_CLICK";
 
 
 		Lockscreen.prototype.setState = function(state) {
