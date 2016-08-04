@@ -47,7 +47,7 @@ public class MediaSessionController implements MusicFocusable {
 	private PlaybackStateCompat.Builder mPlaybackStateCompatBuilder;
 	private MediaActionListener mediaActionListener = null;
 	
-	private static final long DOUBLE_PRESS_INTERVAL = 250; // in millis
+	private static final long DOUBLE_PRESS_INTERVAL = 400; // in millis
 	private long lastTapTimeMs = 0;
 	private int numberOfTaps = 0;
 
