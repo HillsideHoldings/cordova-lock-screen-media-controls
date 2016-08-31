@@ -26,6 +26,14 @@
     [skipForwardIntervalCommand setEnabled:YES];
     [skipForwardIntervalCommand addTarget:self action:@selector(skipForwardEvent:)];
     
+    MPRemoteCommand *nextTrackCommand = [rcc nextTrackCommand];
+    [nextTrackCommand setEnabled:YES];
+    [nextTrackCommand addTarget:self action:@selector(skipBackwardEvent:)];
+    
+    MPRemoteCommand *previousTrackCommand = [rcc previousTrackCommand];
+    [previousTrackCommand setEnabled:YES];
+    [previousTrackCommand addTarget:self action:@selector(skipForwardEvent:)];
+    
     MPRemoteCommand *pauseCommand = [rcc pauseCommand];
     [pauseCommand setEnabled:YES];
     [pauseCommand addTarget:self action:@selector(pauseEvent:)];
