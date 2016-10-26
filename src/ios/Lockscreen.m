@@ -49,14 +49,19 @@
 
 -(void)releaseControls {
     MPRemoteCommandCenter *rcc = [MPRemoteCommandCenter sharedCommandCenter];
+
     MPSkipIntervalCommand *skipBackwardIntervalCommand = [rcc skipBackwardCommand];
     [skipBackwardIntervalCommand removeTarget:self];
+
     MPSkipIntervalCommand *skipForwardIntervalCommand = [rcc skipForwardCommand];
     [skipForwardIntervalCommand removeTarget:self];
+
     MPRemoteCommand *pauseCommand = [rcc pauseCommand];
     [pauseCommand removeTarget:self];
+
     MPRemoteCommand *playCommand = [rcc playCommand];
     [playCommand removeTarget:self];
+
     MPRemoteCommand *remoteCommand = [rcc togglePlayPauseCommand];
     [remoteCommand removeTarget:self];
 }
@@ -93,10 +98,29 @@
 
 - (void)setSkipInterval:(CDVInvokedUrlCommand*)command {
     MPRemoteCommandCenter *rcc = [MPRemoteCommandCenter sharedCommandCenter];
+
     MPSkipIntervalCommand *skipBackwardIntervalCommand = [rcc skipBackwardCommand];
     skipBackwardIntervalCommand.preferredIntervals = @[[command argumentAtIndex:0]];
+    [skipBackwardIntervalCommand setEnabled:YES];
+    
     MPSkipIntervalCommand *skipForwardIntervalCommand = [rcc skipForwardCommand];
     skipForwardIntervalCommand.preferredIntervals = @[[command argumentAtIndex:0]];
+    [skipForwardIntervalCommand setEnabled:YES];
+    
+    MPRemoteCommand *nextTrackCommand = [rcc nextTrackCommand];
+    [nextTrackCommand setEnabled:YES];
+    
+    MPRemoteCommand *previousTrackCommand = [rcc previousTrackCommand];
+    [previousTrackCommand setEnabled:YES];
+    
+    MPRemoteCommand *pauseCommand = [rcc pauseCommand];
+    [pauseCommand setEnabled:YES];
+    
+    MPRemoteCommand *playCommand = [rcc playCommand];
+    [playCommand setEnabled:YES];
+    
+    MPRemoteCommand *remoteCommand = [rcc togglePlayPauseCommand];
+    [remoteCommand setEnabled:YES];
 }
 
 - (void)init:(CDVInvokedUrlCommand*)command {
